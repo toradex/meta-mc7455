@@ -1,8 +1,8 @@
 How to add support for the Sierra Wirless MC7455 modem
 
 To build the Image
-1. Add meta-mc7455 to your layers directory
-2. Add the following lines to your local.conf:
+1. Add meta-mc7455 to layers directory
+2. Add the following lines to local.conf:
   IMAGE_INSTALL_append = " modemmanager networkmanager"
   IMAGE_INSTALL_remove = " ofono connman connman-gnome connman-client"
   DISTRO_FEATURES_remove = " 3g" # To finally remove ofono
@@ -15,7 +15,7 @@ On the module we can use ModemManager and NetworkManager to connect to a network
 
 # Say no to auto connect if the SIM has a pin
 nmcli c add type gsm ifname cdc-wdm0 con-name <connection name> apn <APN> connection.autoconnect no
-# Now it will ask you if you want to set a pin
+# Now it will ask if we want to set a pin
 nmcli c --ask up <connection name>
 # You can change the connection with (e.g. set autoconnect to yes now)
 nmcli c edit <conneciton name>
