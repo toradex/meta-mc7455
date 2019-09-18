@@ -32,6 +32,7 @@ FILES_${PN} += " \
     ${datadir}/icons \
     ${datadir}/polkit-1 \
     ${datadir}/dbus-1 \
+    ${datadir}/ModemManager \
     ${libdir}/ModemManager \
     ${systemd_unitdir}/system \
 "
